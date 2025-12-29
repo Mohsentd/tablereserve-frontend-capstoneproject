@@ -1,0 +1,242 @@
+.booking-form {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #495e57 0%, #3d4f48 100%);
+  padding: 3rem 2rem;
+  font-family: 'Karla', sans-serif;
+  color: #edefee;
+  position: relative;
+}
+
+.booking-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(244, 206, 20, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(244, 206, 20, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 500px;
+}
+
+.booking-home {
+  width: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  z-index: 100;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.booking-home:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+}
+
+.booking-header {
+  color: #f4ce14;
+  font-size: 36px;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.booking-subheader {
+  font-size: 18px;
+  font-weight: 800;
+  color: #edefee;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.booking-title {
+  margin: 2rem 0;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #edefee;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+input,
+select {
+  width: 250px;
+  height: 35px;
+  border-radius: 0.5rem;
+  border: 2px solid #e0e0e0;
+  padding: 0.25rem 1rem;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #f4ce14;
+  box-shadow: 0 0 0 3px rgba(244, 206, 20, 0.2);
+}
+
+input:hover,
+select:hover {
+  border-color: #d0d0d0;
+}
+
+label {
+  font-size: 16px;
+  font-style: italic;
+  color: #333333;
+  font-weight: 600;
+}
+
+.seating-preference {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 250px;
+}
+
+.seating-label {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 0;
+  color: #333333;
+  font-weight: 600;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  color: #333333;
+}
+
+.radio-label input[type='radio'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #f4ce14;
+}
+
+.radio-label span {
+  user-select: none;
+}
+
+.radio-label:hover span {
+  color: #495e57;
+  transition: color 0.2s ease;
+}
+
+.booking-button {
+  font-size: 14px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  font-weight: 800;
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.booking-button:hover {
+  transform: scale(0.95);
+  transition-duration: 200ms;
+  background-color: hsla(50, 91%, 52%, 0.925);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .booking-home {
+    width: 75px;
+  }
+
+  .booking-header {
+    font-size: 64px;
+  }
+
+  .booking-subheader {
+    font-size: 36px;
+  }
+
+  .booking-title {
+    margin: 3rem 0;
+    font-size: 36px;
+  }
+
+  .form-container {
+    gap: 20px;
+    padding: 3rem 2.5rem;
+    max-width: 600px;
+  }
+
+  input,
+  select {
+    width: 400px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  .seating-preference {
+    width: 400px;
+  }
+
+  .seating-label {
+    font-size: 18px;
+  }
+
+  .radio-label {
+    font-size: 18px;
+  }
+
+  .radio-label input[type='radio'] {
+    width: 22px;
+    height: 22px;
+  }
+
+  .booking-button {
+    width: 250px;
+    font-size: 16px;
+  }
+}
