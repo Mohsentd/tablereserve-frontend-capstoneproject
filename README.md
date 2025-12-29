@@ -2,4 +2,4 @@
 
 This is a Front End Project for assignment on Coursera. (Meta Front End Developer Capstone)
 
-Screenshots available in screenshots folder!
+Screenshots are available in screenshots folder!
